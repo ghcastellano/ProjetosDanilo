@@ -17,7 +17,7 @@ function saveTasks() {
 
 function addTask() {
   const title = taskInput.value.trim();
-
+  
   if (title === "") {
     taskInput.focus();
     return;
@@ -74,7 +74,7 @@ function updateProgress() {
 
   progressText.textContent = `${percentage}% concluido`;
   progressBar.style.width = `${percentage}%`;
-  totalTasksText.textContent = `${total} tarefas cadastradas`;
+  totalTasksText.textContent = total === 1 ? "1 tarefa cadastrada" : `${total} tarefas cadastradas`;
 }
 
 function renderTasks() {
