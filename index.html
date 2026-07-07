@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Primeiro App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="header">
+      <div>
+        <p class="eyebrow">Minha jornada em IA</p>
+        <h1>Meu Primeiro App</h1>
+      </div>
+      <div class="progress-box">
+        <span id="progressText">0% concluido</span>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="creator">
+      <input id="taskInput" type="text" placeholder="Digite uma tarefa de estudo">
+      <select id="subjectInput" aria-label="Materia">
+        <option value="Programacao">Programacao</option>
+        <option value="IA">IA</option>
+        <option value="Carreira">Carreira</option>
+        <option value="Ingles">Ingles</option>
+        <option value="Banco de dados">Banco de dados</option>
+        <option value="APIs">APIs</option>
+        <option value="Logica">Logica</option>
+      </select>
+      <button id="addTaskButton" type="button">Adicionar tarefa</button>
+    </section>
+
+    <section class="filters">
+      <button class="filter-button active" type="button" data-filter="all">Todas</button>
+      <button class="filter-button" type="button" data-filter="open">Pendentes</button>
+      <button class="filter-button" type="button" data-filter="done">Concluidas</button>
+    </section>
+
+    <section>
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyMessage" class="empty-message">Nenhuma tarefa ainda. Adicione a primeira acima.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
