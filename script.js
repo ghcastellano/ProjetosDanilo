@@ -5,6 +5,7 @@ const taskList = document.querySelector("#taskList");
 const emptyMessage = document.querySelector("#emptyMessage");
 const progressText = document.querySelector("#progressText");
 const progressBar = document.querySelector("#progressBar");
+const totalTasksText = document.querySelector("#totalTasksText");
 const filterButtons = document.querySelectorAll(".filter-button");
 
 let tasks = JSON.parse(localStorage.getItem("studyTasks")) || [];
@@ -73,6 +74,7 @@ function updateProgress() {
 
   progressText.textContent = `${percentage}% concluido`;
   progressBar.style.width = `${percentage}%`;
+  totalTasksText.textContent = `${total} tarefas cadastradas`;
 }
 
 function renderTasks() {
